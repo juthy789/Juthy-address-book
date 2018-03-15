@@ -2,6 +2,7 @@
 
 session_start();
 
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -27,8 +28,25 @@ $connection = new mysqli($servername, $username, $password, $dbname);
 </center>
 
 <a href="add_contact.html"><button style="margin-left: 5%;margin-top: 2%;border-radius: 10px;">ADD_CONTACT</button></a>
-<div class="container">
 
+<div class="container">
+<div class="row">
+  <form class="form-horizontal" action="search.php" method="POST">
+  <div class="form-group">
+    <div class="row">
+      <div class="col-sm-offset-4 col-sm-4">
+        <input type="text" class="form-control" name="data">
+      </div>
+      <div class="col-sm-4">
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+  </div>
+  </div>
+  
+
+    
+</form>
+</div>
  <table class="table table-striped">
  	<thead>
  		<th>Full Name</th>
